@@ -1,87 +1,68 @@
+/* Global body background */
 body {
-font-family: Arial, sans-serif;
-color: #333;
-background-color: #ffe6f0;/*light pink background*/
-margin: 0;
-padding: 0;
-line-height: 1.6;
-}
-header {
-background-color: #d63384;/*dark pink*/
-color: white;
-padding: 20px;
-text-align: center;
-}
-.logo{
-  width:120px;
-}
-  nav ul{
-    list-style:none
-    padding:0;
-}
-  nav ul li {
-    display:inline-block;
-    margin: 0 15px;
-  }
-nav a {
-  text-decoration:none;
-  color:white; /*white text*/
-  font-weight:bold;
-}
-nav a:hover {
-text-decoration: underline;
-}
-.hero{
-  backgroung:#ffe6f0
-    height:300px
-    color:#333:
-    text-align:center;
-    padding-top:100px;
-  }
-.product-list{
-  display:flex;
-  justify-content: space-around;
-  list style:none;
-  padding: 0;
-}
-main {
-padding: 20px;
-max-width: 800px;
-margin: 0 auto;
+    background-color: #ffe6f0; /* Light pink */
 }
 
-main img {
-max-width: 100%;
-height: auto;
-display: block;
-margin: 20px 0;
+/* Navbar styling */
+.navbar, .bg-dark {
+    background-color: #c71585 !important; /* Dark pink */
 }
+
+.navbar .navbar-brand, 
+.navbar .nav-link,
 footer {
-background-color: #d63384; /*dark pink*/;
-color: white; /*white text*/
-text-align: center;
-padding: 10px;
-position: fixed;
-bottom: 0;
-width: 100%;
-}
-p {
-font-size: 1.1em;
+    color: #ffffff !important; /* White text */
 }
 
-a {
-color: #d63384;/*match theme color*/
-text-decoration: none;
+/* Navbar links hover and active */
+.navbar .nav-link:hover, 
+.navbar .nav-link.active {
+    color: #ffccdd !important; /* Lighter pink on hover/active */
 }
 
-a:hover {
-text-decoration: underline;
+/* Footer styling */
+footer.bg-dark {
+    background-color: #c71585 !important; /* Dark pink */
+    color: #ffffff;
 }
-img {
-border: 5px solid #d63384;/* match dark pink*/
-border-radius: 10px;
+
+/* Footer links if any inside footer */
+footer a {
+    color: #ffffff;
+    text-decoration: none;
 }
-main a[href^="mailto:"] {
-color: #ff5722;
-font-weight: bold;
+
+footer a:hover {
+    color: #ffccdd;
 }
+
+/* Form elements focus */
+input:focus, select:focus, textarea:focus {
+    border-color: #c71585;
+    box-shadow: 0 0 5px #c71585;
+    outline: none;
+}
+
+/* Buttons primary */
+.btn-primary {
+    background-color: #c71585;
+    border-color: #c71585;
+}
+
+.btn-primary:hover {
+    background-color: #a10d67;
+    border-color: #a10d67;
+}
+
+/* Buttons secondary */
+.btn-secondary {
+    background-color: #d58eb5;
+    border-color: #d58eb5;
+    color: #fff;
+}
+
+.btn-secondary:hover {
+    background-color: #b57091;
+    border-color: #b57091;
+}
+
