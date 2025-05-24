@@ -1,0 +1,83 @@
+!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Menu</title>
+  <link rel="stylesheet" href="style.css">
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1><span class="highlight">Cake</span> Haven</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="cakes.html">Our Cakes</a></li>
+                    <li class="current"><a href="classes.html">Baking Classes</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="main">
+        <div class="container">
+            <article id="main-col">
+                <h1 class="page-title">Baking Classes</h1>
+                <p>Join our baking classes and learn the art of cake decorating from our expert bakers. Our classes are suitable for all skill levels, from beginners to advanced decorators.</p>
+                <p>Each class includes hands-on instruction, all necessary materials, and of course, you get to take home your creations!</p>
+                
+                <div class="class">
+                    <h3>Beginner's Cake Decorating</h3>
+                    <p>Learn the basics of cake decorating including icing techniques, piping, and simple designs.</p>
+                    <p>Duration: 4 weeks | Cost: $150</p>
+                </div>
+                
+                <div class="class">
+                    <h3>Advanced Fondant Techniques</h3>
+                    <p>Master fondant work including covering cakes, creating figures, and intricate designs.</p>
+                    <p>Duration: 6 weeks | Cost: $250</p>
+                </div>
+            </article>
+
+            <aside id="sidebar">
+                <div class="dark">
+                    <h3>Register for Classes</h3>
+                    <form class="quote">
+                        <div>
+                            <label>Name</label><br>
+                            <input type="text" placeholder="Name" required>
+                        </div>
+                        <div>
+                            <label>Email</label><br>
+                            <input type="email" placeholder="Email Address" required>
+                        </div>
+                        <div>
+                            <label>Class</label><br>
+                            <select required>
+                                <option value="">Select a class</option>
+                                <option value="beginner">Beginner's Cake Decorating</option>
+                                <option value="advanced">Advanced Fondant Techniques</option>
+                            </select>
+                        </div>
+                        <button class="button_1" type="submit">Register</button>
+                    </form>
+                </div>
+            </aside>
+        </div>
+    </section>
+
+    <footer>
+        <p>Cake Haven, Copyright &copy; 2025</p>
+    </footer>
+</body>
+</html>
