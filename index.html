@@ -34,31 +34,100 @@
         </div>
 
 </header>
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sweet Sensations Bakery</title>
+    <!-- Bootstrap CSS -->
+    <link 
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" 
+      rel="stylesheet" 
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoYz1IHdhpC6Ety5qOn+3RYdg4Va+PmSTsz/K68vbdEjh4u" 
+      crossorigin="anonymous" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <header class="bg-dark text-white text-center p-4 mb-4">
+        <h1 class="display-4 fw-bold">Sweet Sensations Bakery</h1>
+        <p class="lead">Bringing love and flavor to every bite</p>
+    </header>
 
-    <section id="boxes">
-        <div class="container">
-            <div class="box">
-                <img src="images/cake1.jpg" alt="Birthday Cake" width="300" height="200">
-                <h3>Birthday Cakes</h3>
-                <p>Celebrate your special day with our custom birthday cakes</p>
-            </div>
-            <div class="box">
-                <img src="images/cake2.jpg" alt="Wedding Cake" width="300" height="200">
-                <h3>Wedding Cakes</h3>
-                <p>Elegant designs for your perfect wedding day</p>
-            </div>
-            <div class="box">
-                <img src="images/cake3.jpg" alt="Specialty Cake" width="300" height="200">
-                <h3>Specialty Cakes</h3>
-                <p>Unique creations for any occasion</p>
-            </div>
+    <main class="container">
+      <div class="row mb-5">
+        <div class="col-md-6">
+          <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=800&q=80" alt="Delicious cupcakes" class="img-fluid rounded shadow-sm" />
         </div>
-    </section>
+        <div class="col-md-6 d-flex flex-column justify-content-center">
+          <h2>Welcome to Sweet Sensations</h2>
+          <p>At Sweet Sensations, baking is not just a craft, it’s a passion. Every cake, pastry, and sweet treat is created with love and the finest ingredients to bring joy to your taste buds. Our mission is to share the magic of our flavorful creations with the community.</p>
+          <p>From traditional recipes to innovative flavors, every bite is a delicious story waiting to delight you and your loved ones.</p>
+        </div>
+      </div>
 
-<footer>
-<p> © 2025 Artisan Cakes. All right reserved.</p>
-</footer>
+      <section class="cakes-section mb-5">
+        <h2 class="mb-4 text-center">Our Cakes</h2>
+        <div class="row g-4">
+          <div class="col-md-4 text-center">
+            <img src="https://images.unsplash.com/photo-1523983302550-09260df7b7a7?auto=format&fit=crop&w=600&q=80" alt="Wedding Cake" class="img-fluid rounded mb-3" />
+            <h3>Wedding Cakes</h3>
+            <p>Elegant, customized wedding cakes that make your special day unforgettable. Crafted with care and attention to detail to suit your theme and taste.</p>
+          </div>
+          <div class="col-md-4 text-center">
+            <img src="https://images.unsplash.com/photo-1542831371-d531d36971e6?auto=format&fit=crop&w=600&q=80" alt="Specialty Cake" class="img-fluid rounded mb-3" />
+            <h3>Specialty Cakes</h3>
+            <p>Unique and creative specialty cakes designed to wow and satisfy. From themed designs to luxurious flavors, made just for you.</p>
+          </div>
+          <div class="col-md-4 text-center">
+            <img src="https://images.unsplash.com/photo-1509228627152-2f1719691d72?auto=format&fit=crop&w=600&q=80" alt="Birthday Cake" class="img-fluid rounded mb-3" />
+            <h3>Birthday Cakes</h3>
+            <p>Celebrate your milestones with our delicious and beautifully decorated birthday cakes, perfect for children and adults alike.</p>
+          </div>
+        </div>
+      </section>
 
+      <section class="blog-section">
+        <h2 class="mb-4">Our Passion for Baking</h2>
+        <div class="row g-4">
+          <article class="col-md-6 col-lg-4">
+            <img 
+              src="https://images.unsplash.com/photo-1508747703727-1c368f7e6f4e?auto=format&fit=crop&w=600&q=80" 
+              alt="Baking ingredients" 
+              class="img-fluid rounded mb-3" />
+            <h3>Why We Bake</h3>
+            <p>There’s something magical in creating something from scratch, in measuring, mixing and waiting for the perfect rise. Baking allows us to express creativity while bringing comfort and joy to others.</p>
+          </article>
+          <article class="col-md-6 col-lg-4">
+            <img 
+              src="https://images.unsplash.com/photo-1612197526303-d0aa1a43eb57?auto=format&fit=crop&w=600&q=80" 
+              alt="Decorating cakes" 
+              class="img-fluid rounded mb-3" />
+            <h3>Crafting Tasteful Treats</h3>
+            <p>Every recipe is perfected to awaken your taste buds, blending traditional techniques with fresh, high-quality ingredients. Our commitment is to deliver indulgence that leaves a lasting impression.</p>
+          </article>
+          <article class="col-md-6 col-lg-4">
+            <img 
+              src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=600&q=80" 
+              alt="Home baked breads" 
+              class="img-fluid rounded mb-3" />
+            <h3>Sharing with Community</h3>
+            <p>We don’t just bake for ourselves – we bake to bring people together. Whether for celebrations or everyday moments, our treats aim to make life sweeter and bond us through shared flavor experiences.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+      <p class="mb-0">&copy; 2024 Sweet Sensations Bakery. All rights reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS Bundle with Popper (optional, for functionality like dropdowns) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" 
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+6q8bY81QANwvN64/yPp6vsu6i4+"
+      crossorigin="anonymous"></script>
 </body>
-
 </html>
+
+
