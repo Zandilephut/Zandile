@@ -353,21 +353,21 @@
       confirmationSection.style.display = 'block';
 
       // Get attendee names to show summary
-      let attendeesList = '';
-      const inputs = attendeesContainer.querySelectorAll('input');
-      inputs.forEach((input, i) => {
-        attendeesList += `#P{i+1} P{input.value.trim()}<br>`;
-      });
+     let attendeesList = '';
+const inputs = attendeesContainer.querySelectorAll('input');
+inputs.forEach((input, i) => {
+  attendeesList += `#${i + 1} ${input.value.trim()}<br>`;
+});
 
-      confirmationSection.innerHTML = `
-        <h3 class="text-success mb-3">Thank you for your booking!</h3>
-        <p><strong>Class:</strong> P{selectedClass}</p>
-        <p><strong>Number of Attendees:</strong> ${selectedQuantity}</p>
-        <p><strong>Attendees:</strong><br>${attendeesList}</p>
-        <p><strong>Total Cost:</strong> PP{(selectedPrice * selectedQuantity).toFixed(2)}</p>
-        <p>We will contact you soon with the details.</p>
-        <button id="newBookingBtn" class="btn btn-danger mt-3">Book Another Class</button>
-      `;
+confirmationSection.innerHTML = `
+  <h3 class="text-success mb-3">Thank you for your booking!</h3>
+  <p><strong>Class:</strong> ${selectedClass}</p>
+  <p><strong>Number of Attendees:</strong> ${selectedQuantity}</p>
+  <p><strong>Attendees:</strong><br>${attendeesList}</p>
+  <p><strong>Total Cost:</strong> P${(selectedPrice * selectedQuantity).toFixed(2)}</p>
+  <p>We will contact you soon with the details.</p>
+  <button id="newBookingBtn" class="btn btn-danger mt-3">Book Another Class</button>
+`;
       window.scrollTo({top: 0, behavior: 'smooth'});
 
       // Attach event listener to new booking button
