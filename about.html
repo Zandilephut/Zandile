@@ -1,41 +1,57 @@
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Me- Artisan Bakery</title>
-<!-- Bootstrap CSS -->
-   <link rel="stylesheet" type="text/css" href="styles.css">
-</head>
-<body>
-  background-color: #ffe4eb; /* Light pink */
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Me - Artisan Bakery</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" type="text/css" href="styles.css">
+
+  <!-- Optional internal style (if not using external stylesheet) -->
+  <style>
+    body {
+      background-color: #ffe4eb; /* Light pink */
       color: #333;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
+
     nav.navbar-dark {
-      background-color: #2c2f33 !important; /* Dark background */
+      background-color: #C71585 !important; /* Dark pink */
     }
+
     nav.navbar-dark .navbar-nav .nav-link {
       color: #ffffff;
       font-weight: 600;
       transition: color 0.3s ease;
     }
+
     nav.navbar-dark .navbar-nav .nav-link:hover,
     nav.navbar-dark .navbar-nav .nav-link:focus {
-      color: #ff6384;
+      color: #ffb6c1;
       text-decoration: underline;
     }
+
     footer {
-      background-color: #2c2f33;
+      background-color: #C71585;
       color: #ffffff;
       padding: 1rem 0;
       text-align: center;
       font-size: 0.9rem;
       margin-top: 3rem;
-  }
-   <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container">
-      <a class="navbar-brand fw-bold" href="index.html">Artisan bakery</a>
+      <a class="navbar-brand fw-bold" href="index.html">Artisan Bakery</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -43,35 +59,36 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto fw-semibold">
           <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="about.html">About Us</a></li>
           <li class="nav-item"><a class="nav-link" href="index.html#our-cakes-section">Our Cakes</a></li>
+          <li class="nav-item"><a class="nav-link" href="classes.html">Baking Class</a></li>
           <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
-          <li class="nav-item"><a class="nav-link active" aria-current="page" href="classes.html">Baking Class</a></li>
-          <li class="nav-item"><a class="nav-link" href="Feedback.html">Feedback</a></li>
+          <li class="nav-item"><a class="nav-link" href="feedback.html">Feedback</a></li>
         </ul>
       </div>
     </div>
   </nav>
+
+  <!-- Page Header -->
   <header class="bg-dark text-white text-center p-4 mb-4">
     <h1 class="display-4 fw-bold">About Artisan Bakery</h1>
     <p class="lead">A journey fueled by tradition, passion, and flavor</p>
   </header>
+
+  <!-- Main Content -->
   <main class="container mb-5">
     <article>
       <div class="row g-4 align-items-center">
         <div class="col-md-5">
-          <img
-            src="Freash Bread.jpg"
-            alt="Fresh Bread.jpg"
-            class="img-fluid rounded shadow-sm" />
+          <img src="Freash Bread.jpg" alt="Fresh Bread" class="img-fluid rounded shadow-sm" />
         </div>
         <div class="col-md-7">
           <h2 class="mb-3">Our Story</h2>
           <p>
-            My baking journey began when I was just 10 years old, standing beside my grandmother in her cozy kitchen. She shared with me not just recipes, but generations of tradition, love, and secrets to creating the most delightful treats. Those early mornings filled with the aromas of fresh bread and sweet pastries sparked a passion that has only grown stronger with each passing year.
+            My baking journey began when I was just 10 years old, standing beside my grandmother in her cozy kitchen...
           </p>
           <p>
-            The recipes I cherish are time-tested treasures, handed down through my family and now reimagined with my own twist to bring both nostalgia and excitement to every plate.
+            The recipes I cherish are time-tested treasures, handed down through my family...
           </p>
         </div>
       </div>
@@ -79,34 +96,27 @@
       <section class="mt-5">
         <h2>Our Passion & Drive</h2>
         <p>
-          At Artisan Bakery, our passion for baking is fueled by a desire to create joy and connection. Baking is more than mixing ingredients — it's crafting experiences and memories. We're driven to use only the freshest, high-quality ingredients and blend tradition with creativity to make each treat a masterpiece.
-        </p>
-        <p>
-          We believe everyone deserves a taste of our heartfelt creations — whether it’s a cake for a special occasion, a comforting pastry with your morning coffee, or simply a sweet treat to brighten your day.
+          At Artisan Bakery, our passion for baking is fueled by a desire to create joy and connection...
         </p>
       </section>
 
       <section class="mt-5">
         <h2>What We Offer</h2>
         <p>
-          From delicate wedding cakes to imaginative specialty cakes and joyful birthday favorites, our offerings are as diverse as the celebrations they accompany. We pour our heart and soul into each creation, ensuring bespoke flavors and beautiful designs that reflect your unique story.
-        </p>
-        <p>
-          Our commitment is to deliver sweet moments crafted with care, passion, and a touch of tradition — just like my grandmother taught me.
+          From delicate wedding cakes to imaginative specialty cakes and joyful birthday favorites...
         </p>
       </section>
     </article>
   </main>
 
-  <footer class="bg-dark text-white text-center py-3">
+  <!-- Footer -->
+  <footer>
     <p class="mb-0">&copy; 2025 Artisan Bakery. All rights reserved.</p>
   </footer>
 
-  <!-- Bootstrap JS Bundle with Popper -->
-  <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+6q8bY81QANwvN64/yPp6vsu6i4+"
     crossorigin="anonymous"></script>
 </body>
 </html>
-
