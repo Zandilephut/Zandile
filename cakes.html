@@ -21,9 +21,18 @@
       padding: 1rem;
       background: #fff;
       transition: box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
     }
     .treat-card:hover {
       box-shadow: 0 6px 14px rgb(255 105 180 / 0.5);
+    }
+    .treat-card img {
+      width: 100%;
+      height: 200px; /* Fixed height for equal images */
+      object-fit: cover; /* Maintain aspect ratio */
+      border-radius: 0.375rem; /* Rounded corners */
     }
     .section-title {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -32,28 +41,9 @@
       margin-bottom: 1.5rem;
       text-align: center;
     }
-    #payment-section {
-      max-width: 500px;
-      margin: 2rem auto;
-      padding: 2rem;
-      background: #fff0f6;
-      border-radius: 15px;
-      box-shadow: 0 4px 10px rgb(255 105 180 / 0.3);
-      display: none;
-    }
-    #confirmation-message {
-      max-width: 500px;
-      margin: 2rem auto;
-      padding: 2rem;
-      background: #e9f7ef;
-      border-radius: 15px;
-      box-shadow: 0 4px 10px rgb(72 180 97 / 0.3);
-      display: none;
-      text-align: center;
-    }
-    .form-label {
-      font-weight: 600;
-      color: #d6336c;
+    footer {
+      background-color: #c71585; /* Dark pink */
+      color: white;
     }
   </style>
 </head>
@@ -71,22 +61,13 @@
             <a class="nav-link" href="index.html">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="about.html">About Us</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="index.html#our-cakes-section">Our Cakes</a>
-          </li>
-          <li class="nav-item">
             <a class="nav-link" href="contact.html">Contact Us</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="baking-class.html">Baking Class</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="land.html">Land</a>
-          </li>
-          <li class="nav-item">
             <a class="nav-link" href="feedback.html">Feedback</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="baking-class.html">Baking Class</a>
           </li>
         </ul>
       </div>
@@ -104,8 +85,8 @@
       <div class="row g-4">
         <!-- Wedding Cakes -->
         <div class="col-md-4">
-          <div class="treat-card d-flex flex-column h-100">
-            <img src="https://images.unsplash.com/photo-1523983302550-09260df7b7a7?auto=format&fit=crop&w=400&q=80" alt="Wedding Cake" class="img-fluid rounded mb-3" />
+          <div class="treat-card">
+            <img src="https://images.unsplash.com/photo-1523983302550-09260df7b7a7?auto=format&fit=crop&w=400&q=80" alt="Wedding Cake" />
             <h4>Elegant Wedding Cake</h4>
             <p>Custom designed elegant wedding cake with fresh flowers and smooth fondant finishing.</p>
             <p class="fw-bold text-danger">$150 per tier</p>
@@ -114,8 +95,8 @@
         </div>
         <!-- Specialty Cakes -->
         <div class="col-md-4">
-          <div class="treat-card d-flex flex-column h-100">
-            <img src="cake.jpg" alt="Specialty Cake" class="img-fluid rounded mb-3" />
+          <div class="treat-card">
+            <img src="cake.jpg" alt="Specialty Cake" />
             <h4>Gourmet Specialty Cake</h4>
             <p>A specialty cake with rich flavors and artistic decoration for unique celebrations.</p>
             <p class="fw-bold text-danger">$70 each</p>
@@ -124,8 +105,8 @@
         </div>
         <!-- Birthday Cakes -->
         <div class="col-md-4">
-          <div class="treat-card d-flex flex-column h-100">
-            <img src="https://images.unsplash.com/photo-1509228627152-2f1719691d72?auto=format&fit=crop&w=400&q=80" alt="Birthday Cake" class="img-fluid rounded mb-3" />
+          <div class="treat-card">
+            <img src="https://images.unsplash.com/photo-1509228627152-2f1719691d72?auto=format&fit=crop&w=400&q=80" alt="Birthday Cake" />
             <h4>Fun Birthday Cake</h4>
             <p>Bright and colorful birthday cakes perfect for all ages and themes.</p>
             <p class="fw-bold text-danger">$50 each</p>
@@ -134,8 +115,8 @@
         </div>
         <!-- Cupcakes -->
         <div class="col-md-4">
-          <div class="treat-card d-flex flex-column h-100">
-            <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=400&q=80" alt="Cupcakes" class="img-fluid rounded mb-3" />
+          <div class="treat-card">
+            <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=400&q=80" alt="Cupcakes" />
             <h4>Assorted Cupcakes</h4>
             <p>Delicious bite-sized cupcakes in a variety of flavors and frostings.</p>
             <p class="fw-bold text-danger">$3 each</p>
@@ -144,8 +125,8 @@
         </div>
         <!-- Cookies -->
         <div class="col-md-4">
-          <div class="treat-card d-flex flex-column h-100">
-            <img src="https://images.unsplash.com/photo-1608219959371-c52dbb2176f6?auto=format&fit=crop&w=400&q=80" alt="Cookies" class="img-fluid rounded mb-3" />
+          <div class="treat-card">
+            <img src="https://images.unsplash.com/photo-1608219959371-c52dbb2176f6?auto=format&fit=crop&w=400&q=80" alt="Cookies" />
             <h4>Homemade Cookies</h4>
             <p>Freshly baked classic cookies with chocolate chips, oatmeal, and more.</p>
             <p class="fw-bold text-danger">$12 per dozen</p>
@@ -154,8 +135,8 @@
         </div>
         <!-- Macarons -->
         <div class="col-md-4">
-          <div class="treat-card d-flex flex-column h-100">
-            <img src="https://images.unsplash.com/photo-1627308595229-7830a5c91f9f?auto=format&fit=crop&w=400&q=80" alt="Macarons" class="img-fluid rounded mb-3" />
+          <div class="treat-card">
+            <img src="https://images.unsplash.com/photo-1627308595229-7830a5c91f9f?auto=format&fit=crop&w=400&q=80" alt="Macarons" />
             <h4>French Macarons</h4>
             <p>Elegant and colorful French macarons with a variety of fruity and nutty flavors.</p>
             <p class="fw-bold text-danger">$15 per dozen</p>
