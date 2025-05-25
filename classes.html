@@ -95,7 +95,7 @@
 
   <header class="bg-danger text-white text-center p-4 mb-4">
     <h1 class="display-4 fw-bold">Physical Baking Classes</h1>
-    <p class="lead">For ages 10 and above. Learn, bake, and have fun with Sweet Sensations!</p>
+    <p class="lead">For ages 16 and above. Learn, bake, and have fun with Artisan Bakery!</p>
   </header>
 
   <main class="container">
@@ -108,7 +108,7 @@
         Join us to experience the joy of baking in a friendly, hands-on environment where you’ll not only create delicious treats but also meet wonderful people who share your passion. You’ll gain practical knowledge, boost your confidence, and leave with tasty creations — all while having a fantastic time!
       </p>
       <p>
-        Baking is more than a skill; it’s a way to express love and creativity. Come be part of the Sweet Sensations family and make memories that last!
+        Baking is more than a skill; it’s a way to express love and creativity. Come be part of the Artisan Bakery family and make memories that last!
       </p>
     </section>
 
@@ -117,19 +117,19 @@
       <div class="row g-4">
         <div class="col-md-6">
           <div class="class-card d-flex flex-column h-100">
-            <div class="age-note">For ages 10 and above</div>
+            <div class="age-note">For ages 16 and above</div>
             <h3>Beginner's Cupcake Workshop</h3>
             <p>Learn the basics of cupcake baking, from batter to frosting techniques in a fun, hands-on session.</p>
-            <p class="fw-bold text-danger">$45 per person</p>
+            <p class="fw-bold text-danger">P450 per person</p>
             <button class="btn btn-danger mt-auto buy-btn" data-name="Beginner's Cupcake Workshop" data-price="45">Book Now</button>
           </div>
         </div>
         <div class="col-md-6">
           <div class="class-card d-flex flex-column h-100">
-            <div class="age-note">For ages 10 and above</div>
+            <div class="age-note">For ages 16 and above</div>
             <h3>Artistic Cake Decorating</h3>
             <p>Take your skills up a notch by learning advanced decorating techniques and stunning designs.</p>
-            <p class="fw-bold text-danger">$75 per person</p>
+            <p class="fw-bold text-danger">P750 per person</p>
             <button class="btn btn-danger mt-auto buy-btn" data-name="Artistic Cake Decorating" data-price="75">Book Now</button>
           </div>
         </div>
@@ -326,15 +326,15 @@
       let attendeesList = '';
       const inputs = attendeesContainer.querySelectorAll('input');
       inputs.forEach((input, i) => {
-        attendeesList += `#${i+1} ${input.value.trim()}<br>`;
+        attendeesList += `#P{i+1} P{input.value.trim()}<br>`;
       });
 
       confirmationSection.innerHTML = `
         <h3 class="text-success mb-3">Thank you for your booking!</h3>
-        <p><strong>Class:</strong> ${selectedClass}</p>
+        <p><strong>Class:</strong> P{selectedClass}</p>
         <p><strong>Number of Attendees:</strong> ${selectedQuantity}</p>
         <p><strong>Attendees:</strong><br>${attendeesList}</p>
-        <p><strong>Total Cost:</strong> $${(selectedPrice * selectedQuantity).toFixed(2)}</p>
+        <p><strong>Total Cost:</strong> PP{(selectedPrice * selectedQuantity).toFixed(2)}</p>
         <p>We will contact you soon with the details.</p>
         <button id="newBookingBtn" class="btn btn-danger mt-3">Book Another Class</button>
       `;
