@@ -1,106 +1,43 @@
-/* Global body background */
+/* Set the entire page background */
 body {
-    background-color: #ffe6f0; /* Light pink */
+  background-color: #FFE4E1; /* very light pink */
+  margin: 0;
+  font-family: Arial, sans-serif;
 }
 
-/* Navbar styling */
-.navbar, .bg-dark {
-    background-color: #c71585 !important; /* Dark pink */
+/* Navigation styling */
+nav {
+  background-color: #C71585; /* dark pink */
+  padding: 10px 0;
+  text-align: center;
 }
 
-.navbar .navbar-brand, 
-.navbar .nav-link,
-footer {
-    color: #ffffff !important; /* White text */
-}
-.navbar-nav {
-  display: flex !important;
-  justify-content: center !important;
-  width: 100%;
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
-.navbar-nav .nav-item {
-  margin-left: 1rem;
-  margin-right: 1rem;
+nav ul li {
+  display: inline-block;
+  margin: 0 15px;
 }
 
-/* Navbar links hover and active */
-.navbar .nav-link:hover, 
-.navbar .nav-link.active {
-    color: #ffccdd !important; /* Lighter pink on hover/active */
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
 }
 
 /* Footer styling */
-footer.bg-dark {
-    background-color: #c71585 !important; /* Dark pink */
-    color: #ffffff;
+footer {
+  background-color: #C71585; /* dark pink */
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
 }
 
-/* Footer links if any inside footer */
-footer a {
-    color: #ffffff;
-    text-decoration: none;
-}
-
-footer a:hover {
-    color: #ffccdd;
-}
-
-/* Form elements focus */
-input:focus, select:focus, textarea:focus {
-    border-color: #c71585;
-    box-shadow: 0 0 5px #c71585;
-    outline: none;
-}
-
-/* Buttons primary */
-.btn-primary {
-    background-color: #c71585;
-    border-color: #c71585;
-}
-
-.btn-primary:hover {
-    background-color: #a10d67;
-    border-color: #a10d67;
-}
-
-/* Buttons secondary */
-.btn-secondary {
-    background-color: #d58eb5;
-    border-color: #d58eb5;
-    color: #fff;
-}
-
-.btn-secondary:hover {
-    background-color: #b57091;
-    border-color: #b57091;
-}
-
-body {
-    background-color: #FFC0CB; /* Light pink */
-    margin: 0;
-    font-family: Arial, sans-serif;
-}
-
-header, footer {
-    background-color: #FF69B4; /* Dark pink */
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-}
-
-.container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 20px;
-}
-
-.box {
-    background-color: white;
-    border: 1px solid #FF69B4; /* Dark pink */
-    border-radius: 5px;
-    margin: 10px;
-    padding: 20px;
-    flex: 1 1 300px; /* Responsive boxes */
-}
