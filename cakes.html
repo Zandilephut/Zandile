@@ -3,18 +3,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Treats & Cakes - Artisan Bakery</title>
-  <link rel="stylesheet" type="text/css" href="styles.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ENjdO4Dr2bkBIFxQpeoYz1IHdhpC6Ety5qOn+3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
+  <title>Artisan Bakery - Cakes Only</title>
+  <!-- Bootstrap CSS CDN -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoYz1HIklE7xEE7RkJo/14mEjB44h7v7j/tWv+0U4P5KG2n"
+    crossorigin="anonymous"
+  />
   <style>
     body {
-      background-color: #ffe4eb; /* Very light pink */
+      background-color: #ffe4eb;
       color: #333;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
     nav.navbar-dark {
-      background-color: #C71585 !important; /* Dark pink */
+      background-color: #2c2f33 !important;
     }
 
     nav.navbar-dark .navbar-nav .nav-link {
@@ -25,98 +30,116 @@
 
     nav.navbar-dark .navbar-nav .nav-link:hover,
     nav.navbar-dark .navbar-nav .nav-link:focus {
-      color: #ffb6c1;
+      color: #ff6384;
       text-decoration: underline;
     }
 
-    .treat-card {
-      box-shadow: 0 4px 8px rgba(255, 182, 193, 0.3);
-      border-radius: 12px;
-      padding: 1rem;
-      background: #fff;
-      transition: box-shadow 0.3s ease;
-      display: flex;
-      flex-direction: column;
-      height: 100%;
-    }
-
-    .treat-card:hover {
-      box-shadow: 0 6px 14px rgba(255, 105, 180, 0.5);
-    }
-
-    .treat-card img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-      border-radius: 0.375rem;
-    }
-
-    .section-title {
-      font-weight: 700;
-      color: #d6336c;
-      margin-bottom: 1.5rem;
-      text-align: center;
-    }
-
     footer {
-      background-color: #C71585;
+      background-color: #2c2f33;
       color: #ffffff;
       padding: 1rem 0;
       text-align: center;
       font-size: 0.9rem;
       margin-top: 3rem;
     }
+
+    .blog-image {
+      width: 100%;
+      height: auto;
+      border-radius: 0.5rem;
+      object-fit: cover;
+      box-shadow: 0 4px 8px rgb(0 0 0 / 0.1);
+    }
+
+    .blog-intro {
+      font-size: 1.125rem;
+      line-height: 1.5;
+      color: #4a4a4a;
+      margin-bottom: 1rem;
+    }
+
+    .row.g-4 > * {
+      padding-bottom: 1rem;
+    }
+
+    .img-fluid-wrapper {
+      overflow: hidden;
+      border-radius: 0.5rem;
+    }
+
+    h1 {
+      color: #bb2d55;
+    }
   </style>
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark">
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark shadow-sm">
     <div class="container">
-      <a class="navbar-brand fw-bold" href="index.html">Artisan Bakery</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <a class="navbar-brand fw-bold" href="#">Artisan Bakery</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+        aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto fw-semibold">
-          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-          <li class="nav-item"><a class="nav-link" href="cakes.html">Cakes</a></li>
-          <li class="nav-item"><a class="nav-link" href="classes.html">Baking Class</a></li>
-          <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
-          <li class="nav-item"><a class="nav-link" href="feedback.html">Feedback</a></li>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="classes.html">Baking Class</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Feedback.html">Feedback</a>
+          </li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <header class="bg-danger text-white text-center p-4 mb-4">
-    <h1 class="display-4 fw-bold">Artisan Bakery</h1>
-    <p class="lead">Choose your favorite treats and cakes</p>
-  </header>
-
-  <main class="container">
-    <section id="treats-section">
-      <h2 class="section-title">Our Treats & Cakes</h2>
-      <div class="row g-4">
-        <!-- Example Cake -->
-        <div class="col-md-4">
-          <div class="treat-card">
-            <img src="https://images.unsplash.com/photo-1523983302550-09260df7b7a7?auto=format&fit=crop&w=400&q=80" alt="Wedding Cake" />
-            <h4>Elegant Wedding Cake</h4>
-            <p>Custom designed elegant wedding cake with fresh flowers and fondant.</p>
-            <p class="fw-bold text-danger">$150 per tier</p>
-            <button class="btn btn-danger mt-auto buy-btn" data-name="Elegant Wedding Cake" data-price="150">Buy</button>
-          </div>
-        </div>
-        <!-- You can repeat for other cakes as needed -->
-      </div>
-    </section>
+  <!-- Main content -->
+  <main class="container py-5">
+    <div class="row g-4 align-items-center">
+      <section class="col-lg-7">
+        <h1 class="mb-4 fw-bold">The Love for Cakes</h1>
+        <p class="blog-intro">
+          At Artisan Bakery, we believe cake is not just a dessert; it is a heartfelt creation
+          crafted with passion, love, and artistry. Every slice tells a story of tradition,
+          innovation, and pure delight.
+        </p>
+        <p class="blog-intro">
+          Our bakery dedicates itself exclusively to handcrafted cakes — each baked to
+          perfection, layered with the freshest ingredients, and adorned with beautiful designs
+          to celebrate every joyful moment.
+        </p>
+      </section>
+      <section class="col-lg-5 img-fluid-wrapper">
+        <img
+          src="https://images.unsplash.com/photo-1543779505-9b8b9b4eda51?auto=format&fit=crop&w=800&q=80"
+          alt="Delicious artisan cake"
+          class="blog-image img-fluid"
+        />
+      </section>
+    </div>
   </main>
 
+  <!-- Footer -->
   <footer>
-    <p class="mb-0">&copy; 2025 Artisan Bakery. All rights reserved.</p>
+    &copy; 2025 Artisan Bakery. All rights reserved.
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Bootstrap JS -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-qQ5eQmWQbbuKfN1T8ulpGQafhDbj2jgPru63Fy6uQlO07D0Le9qBUU7toIbHIsdM"
+    crossorigin="anonymous"
+  ></script>
 </body>
 </html>
-
