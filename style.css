@@ -76,3 +76,31 @@ input:focus, select:focus, textarea:focus {
     border-color: #b57091;
 }
 
+body {
+    background-color: #FFC0CB; /* Light pink */
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header, footer {
+    background-color: #FF69B4; /* Dark pink */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.box {
+    background-color: white;
+    border: 1px solid #FF69B4; /* Dark pink */
+    border-radius: 5px;
+    margin: 10px;
+    padding: 20px;
+    flex: 1 1 300px; /* Responsive boxes */
+}
