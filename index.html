@@ -12,6 +12,30 @@
       crossorigin="anonymous"
     />
     <style>
+nav.navbar {
+  position: relative;
+  background-image: url(Freash Bread.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+nav.navbar::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(44, 47, 51, 0.7);
+  pointer-events: none;
+  z-index: 0;
+}
+
+nav.navbar .container,
+nav.navbar .navbar-collapse {
+  position: relative;
+  z-index: 1;
+}
+
+
         body {
             background-color: #ffe4eb; /* Light pink background */
             color: #333;
