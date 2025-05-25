@@ -13,6 +13,16 @@ body {
 footer {
     color: #ffffff !important; /* White text */
 }
+.navbar-nav {
+  display: flex !important;
+  justify-content: center !important;
+  width: 100%;
+}
+
+.navbar-nav .nav-item {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
 
 /* Navbar links hover and active */
 .navbar .nav-link:hover, 
