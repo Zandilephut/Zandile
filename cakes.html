@@ -4,11 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Artisan Bakery - Cakes Only</title>
-  <!-- Bootstrap CSS CDN -->
+
+  <!-- Bootstrap CSS -->
   <link
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
     rel="stylesheet"
-    integrity="sha384-ENjdO4Dr2bkBIFxQpeoYz1HIklE7xEE7RkJo/14mEjB44h7v7j/tWv+0U4P5KG2n"
     crossorigin="anonymous"
   />
   <style>
@@ -28,8 +28,7 @@
       transition: color 0.3s ease;
     }
 
-    nav.navbar-dark .navbar-nav .nav-link:hover,
-    nav.navbar-dark .navbar-nav .nav-link:focus {
+    nav.navbar-dark .navbar-nav .nav-link:hover {
       color: #ff6384;
       text-decoration: underline;
     }
@@ -58,17 +57,18 @@
       margin-bottom: 1rem;
     }
 
-    .row.g-4 > * {
-      padding-bottom: 1rem;
-    }
-
     .img-fluid-wrapper {
       overflow: hidden;
       border-radius: 0.5rem;
     }
 
-    h1 {
+    h1, h2 {
       color: #bb2d55;
+    }
+
+    .table thead {
+      background-color: #C71585;
+      color: #fff;
     }
   </style>
 </head>
@@ -84,21 +84,11 @@
       </button>
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="about.html">About Us</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="classes.html">Baking Class</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contact.html">Contact Us</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="Feedback.html">Feedback</a>
-          </li>
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="classes.html">Baking Class</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="Feedback.html">Feedback</a></li>
         </ul>
       </div>
     </div>
@@ -106,78 +96,91 @@
 
   <!-- Main content -->
   <main class="container py-5">
-    <!-- Cake Order Section -->
-<section class="mt-5">
-  <h2 class="fw-bold mb-4">Order Your Cake</h2>
-  <form action="payment.html" method="GET">
-    <div class="table-responsive">
-      <table class="table table-bordered align-middle">
-        <thead class="table-dark" style="background-color: #C71585;">
-          <tr class="text-white">
-            <th>Cake</th>
-            <th>Size</th>
-            <th>Price</th>
-            <th>Quantity</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Chocolate Fudge Cake</td>
-            <td>
-              <select name="choc_size" class="form-select">
-                <option value="Small">Small - P80</option>
-                <option value="Medium">Medium - P120</option>
-                <option value="Large">Large - P160</option>
-              </select>
-            </td>
-            <td>P80 - P160</td>
-            <td><input type="number" name="choc_qty" min="0" value="0" class="form-control" /></td>
-          </tr>
-          <tr>
-            <td>Red Velvet Cake</td>
-            <td>
-              <select name="redvelvet_size" class="form-select">
-                <option value="Small">Small - P90</option>
-                <option value="Medium">Medium - P130</option>
-                <option value="Large">Large - P170</option>
-              </select>
-            </td>
-            <td>P90 - P170</td>
-            <td><input type="number" name="redvelvet_qty" min="0" value="0" class="form-control" /></td>
-          </tr>
-          <tr>
-            <td>Vanilla Rainbow Cake</td>
-            <td>
-              <select name="vanilla_size" class="form-select">
-                <option value="Small">Small - P75</option>
-                <option value="Medium">Medium - P115</option>
-                <option value="Large">Large - P155</option>
-              </select>
-            </td>
-            <td>P75 - P155</td>
-            <td><input type="number" name="vanilla_qty" min="0" value="0" class="form-control" /></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    <button type="submit" class="btn btn-primary px-4 py-2 mt-3" style="background-color: #C71585; border: none;">
-      Place Order
-    </button>
-  </form>
-</section>
+    <h1 class="mb-4 fw-bold">Our Delicious Cakes</h1>
 
-    <div class="row g-4 align-items-center">
+    <!-- Cake Order Section -->
+    <section class="mt-4">
+      <h2 class="fw-bold mb-4">Order Your Cake</h2>
+      <form action="payment.html" method="GET">
+        <div class="table-responsive">
+          <table class="table table-bordered align-middle">
+            <thead>
+              <tr>
+                <th>Cake</th>
+                <th>Size</th>
+                <th>Price Range</th>
+                <th>Quantity</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Chocolate Cake -->
+              <tr>
+                <td>
+                  Chocolate Fudge Cake
+                  <input type="hidden" name="cake[]" value="Chocolate Fudge Cake">
+                </td>
+                <td>
+                  <select name="size[]" class="form-select">
+                    <option value="Small - P80">Small - P80</option>
+                    <option value="Medium - P120">Medium - P120</option>
+                    <option value="Large - P160">Large - P160</option>
+                  </select>
+                </td>
+                <td>P80 - P160</td>
+                <td><input type="number" name="qty[]" min="0" value="0" class="form-control" /></td>
+              </tr>
+
+              <!-- Red Velvet Cake -->
+              <tr>
+                <td>
+                  Red Velvet Cake
+                  <input type="hidden" name="cake[]" value="Red Velvet Cake">
+                </td>
+                <td>
+                  <select name="size[]" class="form-select">
+                    <option value="Small - P90">Small - P90</option>
+                    <option value="Medium - P130">Medium - P130</option>
+                    <option value="Large - P170">Large - P170</option>
+                  </select>
+                </td>
+                <td>P90 - P170</td>
+                <td><input type="number" name="qty[]" min="0" value="0" class="form-control" /></td>
+              </tr>
+
+              <!-- Vanilla Cake -->
+              <tr>
+                <td>
+                  Vanilla Rainbow Cake
+                  <input type="hidden" name="cake[]" value="Vanilla Rainbow Cake">
+                </td>
+                <td>
+                  <select name="size[]" class="form-select">
+                    <option value="Small - P75">Small - P75</option>
+                    <option value="Medium - P115">Medium - P115</option>
+                    <option value="Large - P155">Large - P155</option>
+                  </select>
+                </td>
+                <td>P75 - P155</td>
+                <td><input type="number" name="qty[]" min="0" value="0" class="form-control" /></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <button type="submit" class="btn btn-primary px-4 py-2 mt-3" style="background-color: #C71585; border: none;">
+          Place Order
+        </button>
+      </form>
+    </section>
+
+    <!-- Blog/Story Section -->
+    <div class="row g-4 align-items-center mt-5">
       <section class="col-lg-7">
-        <h1 class="mb-4 fw-bold">The Love for Cakes</h1>
+        <h2 class="mb-4 fw-bold">The Love for Cakes</h2>
         <p class="blog-intro">
-          At Artisan Bakery, we believe cake is not just a dessert; it is a heartfelt creation
-          crafted with passion, love, and artistry. Every slice tells a story of tradition,
-          innovation, and pure delight.
+          At Artisan Bakery, we believe cake is not just a dessert; it is a heartfelt creation crafted with passion, love, and artistry.
         </p>
         <p class="blog-intro">
-          Our bakery dedicates itself exclusively to handcrafted cakes — each baked to
-          perfection, layered with the freshest ingredients, and adorned with beautiful designs
-          to celebrate every joyful moment.
+          Our bakery dedicates itself exclusively to handcrafted cakes — each baked to perfection, layered with fresh ingredients, and adorned with beautiful designs to celebrate every joyful moment.
         </p>
       </section>
       <section class="col-lg-5 img-fluid-wrapper">
@@ -198,7 +201,6 @@
   <!-- Bootstrap JS -->
   <script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-qQ5eQmWQbbuKfN1T8ulpGQafhDbj2jgPru63Fy6uQlO07D0Le9qBUU7toIbHIsdM"
     crossorigin="anonymous"
   ></script>
 </body>
