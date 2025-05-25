@@ -1,29 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Artisan Bakery - Cakes Only</title>
-    <!-- Bootstrap CSS CDN -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-ENjdO4Dr2bkBIFxQpeoYz1HIklE7xEE7RkJo/14mEjB44h7v7j/tWv+0U4P5KG2n"
-      crossorigin="anonymous"
-    />
-    <style>
-      body {
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Artisan Bakery - Cakes Only</title>
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoYz1HIklE7xEE7RkJo/14mEjB44h7v7j/tWv+0U4P5KG2n"
+    crossorigin="anonymous"
+  />
+  <style>
+    body {
       background-color: #ffe4eb; /* Light pink */
       color: #333;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
-    nav.navbar-dark {
-      background-color: #C71585 !important; /* Dark pink */
+    /* Nav background with overlay like About page */
+    nav.navbar {
+      position: relative;
+      background-image: url('https://images.unsplash.com/photo-1589308078056-918258c62782?auto=format&fit=crop&w=1200&q=80'); /* Cake-themed */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
     }
 
+    nav.navbar::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-color: rgba(44, 47, 51, 0.7); /* Overlay */
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    nav.navbar .container,
+    nav.navbar .navbar-collapse {
+      position: relative;
+      z-index: 1;
+    }
+
+    nav.navbar-dark .navbar-brand,
     nav.navbar-dark .navbar-nav .nav-link {
-      color: #ffffff;
+      color: #fff;
       font-weight: 600;
       transition: color 0.3s ease;
     }
@@ -35,167 +56,116 @@
     }
 
     footer {
-      background-color: #C71585;
+      background-color: #2c2f33;
       color: #ffffff;
       padding: 1rem 0;
       text-align: center;
       font-size: 0.9rem;
       margin-top: 3rem;
-    }   
-nav.navbar {
-  position: relative;
-  background-image: url(Freash Bread.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
+    }
 
-nav.navbar::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-color: rgba(44, 47, 51, 0.7);
-  pointer-events: none;
-  z-index: 0;
-}
+    h1 {
+      color: #bb2d55;
+    }
 
-nav.navbar .container,
-nav.navbar .navbar-collapse {
-  position: relative;
-  z-index: 1;
-}
+    .blog-image {
+      width: 100%;
+      height: auto;
+      border-radius: 0.5rem;
+      object-fit: cover;
+      box-shadow: 0 4px 8px rgb(0 0 0 / 0.1);
+    }
 
+    .blog-intro {
+      font-size: 1.125rem;
+      line-height: 1.5;
+      color: #4a4a4a;
+      margin-bottom: 1rem;
+    }
 
-        body {
-            background-color: #ffe4eb; /* Light pink background */
-            color: #333;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        /* Navigation Bar */
-        nav.navbar-dark {
-            background-color: #2c2f33 !important; /* Dark background */
-        }
-        nav.navbar-dark .navbar-nav .nav-link {
-            color: #ffffff;
-            font-weight: 600;
-            transition: color 0.3s ease;
-        }
-        nav.navbar-dark .navbar-nav .nav-link:hover,
-        nav.navbar-dark .navbar-nav .nav-link:focus {
-            color: #ff6384; /* Light pink accent on hover */
-            text-decoration: underline;
-        }
-        /* Footer */
-        footer {
-            background-color: #2c2f33;
-            color: #ffffff;
-            padding: 1rem 0;
-            text-align: center;
-            font-size: 0.9rem;
-            margin-top: 3rem;
-        }
-        /* Blog Section */
-        .blog-image {
-            width: 100%;
-            height: auto;
-            border-radius: 0.5rem;
-            object-fit: cover;
-            box-shadow: 0 4px 8px rgb(0 0 0 / 0.1);
-        }
-        .blog-intro {
-            font-size: 1.125rem;
-            line-height: 1.5;
-            color: #4a4a4a;
-            margin-bottom: 1rem;
-        }
-        /* Grid gap spacing */
-        .row.g-4 > * {
-            padding-bottom: 1rem;
-        }
-        /* Responsive image container */
-        .img-fluid-wrapper {
-            overflow: hidden;
-            border-radius: 0.5rem;
-        }
-    </style>
+    .img-fluid-wrapper {
+      overflow: hidden;
+      border-radius: 0.5rem;
+    }
+  </style>
 </head>
 <body>
-    <!-- Navigation bar -->
-    <nav class="navbar navbar-expand-lg navbar-dark shadow-sm">
-      <div class="container">
-        <a class="navbar-brand fw-bold" href="#">Artisan Bakery</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div
-          class="collapse navbar-collapse justify-content-end"
-          id="navbarNav"
-        >
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="about.html">About Us</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="classes.html">Baking Class</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact Us</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="Feedback.html">Feedback</a>
-            </li>
-          </ul>
-        </div>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">Artisan Bakery</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="classes.html">Baking Class</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Feedback.html">Feedback</a>
+          </li>
+        </ul>
       </div>
-    </nav>
+    </div>
+  </nav>
 
-    <!-- Main content with Grid layout -->
-    <main class="container py-5">
-      <div class="row g-4 align-items-center">
-        <!-- Introduction blog text -->
-        <section class="col-lg-7">
-          <h1 class="mb-4 fw-bold" style="color:#bb2d55;">The Love for Cakes</h1>
-          <p class="blog-intro">
-            At Artisan Bakery, we believe cake is not just a dessert; it is a heartfelt creation crafted with passion, love, and artistry. Every slice tells a story of tradition, innovation, and pure delight. Our bakery dedicates itself exclusively to handcrafted cakes — each baked to perfection, layered with the freshest ingredients, and adorned with beautiful designs to celebrate every joyful moment.
-          </p>
-          <p class="blog-intro">
-            We invite you to indulge in our exquisite range of cakes — from timeless classics to cutting-edge creations — that bring smiles and sweet memories. Join us on this delightful journey and awaken your taste buds to the true essence of cake craftsmanship.
-          </p>
-        </section>
+  <!-- Main Content -->
+  <main class="container py-5">
+    <div class="row g-4 align-items-center">
+      <!-- Text section -->
+      <section class="col-lg-7">
+        <h1 class="mb-4 fw-bold">The Love for Cakes</h1>
+        <p class="blog-intro">
+          At Artisan Bakery, we believe cake is not just a dessert; it is a heartfelt creation
+          crafted with passion, love, and artistry. Every slice tells a story of tradition,
+          innovation, and pure delight.
+        </p>
+        <p class="blog-intro">
+          We invite you to indulge in our exquisite range of cakes — from timeless classics to
+          cutting-edge creations — that bring smiles and sweet memories. Join us on this
+          delightful journey and awaken your taste buds to the true essence of cake
+          craftsmanship.
+        </p>
+      </section>
+      <!-- Image section -->
+      <section class="col-lg-5 img-fluid-wrapper">
+        <img
+          src="https://images.unsplash.com/photo-1543779505-9b8b9b4eda51?auto=format&fit=crop&w=800&q=80"
+          alt="Delicious artisan cake"
+          class="blog-image img-fluid"
+        />
+      </section>
+    </div>
+  </main>
 
-        <!-- Side image fluid and responsive -->
-        <section class="col-lg-5 img-fluid-wrapper">
-          <img
-            src="https://images.unsplash.com/photo-1543779505-9b8b9b4eda51?auto=format&fit=crop&w=800&q=80"
-            alt="Delicious artisan cake"
-            class="blog-image img-fluid"
-          />
-        </section>
-      </div>
-    </main>
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Artisan Bakery. All rights reserved.
+  </footer>
 
-    <!-- Footer -->
-    <footer>
-      &copy; 2025 Artisan Bakery. All rights reserved.
-    </footer>
-
-    <!-- Bootstrap JS CDN with Popper -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-qQ5eQmWQbbuKfN1T8ulpGQafhDbj2jgPru63Fy6uQlO07D0Le9qBUU7toIbHIsdM"
-      crossorigin="anonymous"
-    ></script>
+  <!-- Bootstrap JS -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-qQ5eQmWQbbuKfN1T8ulpGQafhDbj2jgPru63Fy6uQlO07D0Le9qBUU7toIbHIsdM"
+    crossorigin="anonymous"
+  ></script>
 </body>
 </html>
-
