@@ -106,6 +106,66 @@
 
   <!-- Main content -->
   <main class="container py-5">
+    <!-- Cake Order Section -->
+<section class="mt-5">
+  <h2 class="fw-bold mb-4">Order Your Cake</h2>
+  <form action="payment.html" method="GET">
+    <div class="table-responsive">
+      <table class="table table-bordered align-middle">
+        <thead class="table-dark" style="background-color: #C71585;">
+          <tr class="text-white">
+            <th>Cake</th>
+            <th>Size</th>
+            <th>Price</th>
+            <th>Quantity</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Chocolate Fudge Cake</td>
+            <td>
+              <select name="choc_size" class="form-select">
+                <option value="Small">Small - P80</option>
+                <option value="Medium">Medium - P120</option>
+                <option value="Large">Large - P160</option>
+              </select>
+            </td>
+            <td>P80 - P160</td>
+            <td><input type="number" name="choc_qty" min="0" value="0" class="form-control" /></td>
+          </tr>
+          <tr>
+            <td>Red Velvet Cake</td>
+            <td>
+              <select name="redvelvet_size" class="form-select">
+                <option value="Small">Small - P90</option>
+                <option value="Medium">Medium - P130</option>
+                <option value="Large">Large - P170</option>
+              </select>
+            </td>
+            <td>P90 - P170</td>
+            <td><input type="number" name="redvelvet_qty" min="0" value="0" class="form-control" /></td>
+          </tr>
+          <tr>
+            <td>Vanilla Rainbow Cake</td>
+            <td>
+              <select name="vanilla_size" class="form-select">
+                <option value="Small">Small - P75</option>
+                <option value="Medium">Medium - P115</option>
+                <option value="Large">Large - P155</option>
+              </select>
+            </td>
+            <td>P75 - P155</td>
+            <td><input type="number" name="vanilla_qty" min="0" value="0" class="form-control" /></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <button type="submit" class="btn btn-primary px-4 py-2 mt-3" style="background-color: #C71585; border: none;">
+      Place Order
+    </button>
+  </form>
+</section>
+
     <div class="row g-4 align-items-center">
       <section class="col-lg-7">
         <h1 class="mb-4 fw-bold">The Love for Cakes</h1>
