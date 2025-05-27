@@ -41,7 +41,7 @@
 </head>
 
 <body>
-  <!-- HEADER -->
+  
   <header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container">
@@ -72,12 +72,10 @@
     </nav>
   </header>
 
-  <!-- MAIN CONTENT -->
   <main class="container my-5">
     <h2 class="text-center mb-4">We Value Your Feedback!</h2>
     <form id="feedbackForm" onsubmit="handleSubmit(event)" class="p-4 border rounded shadow">
 
-      <!-- PERSONAL INFORMATION -->
       <fieldset class="mb-4">
         <legend class="mb-3">Personal Information:</legend>
         <div class="mb-3">
@@ -95,8 +93,6 @@
           <input type="radio" name="gender" value="other" class="ms-3" /> Other
         </div>
       </fieldset>
-
-      <!-- RATING -->
       <fieldset class="mb-4">
         <legend class="mb-3">Rate Your Experience:</legend>
         <div class="mb-3">
@@ -112,7 +108,7 @@
         </div>
       </fieldset>
 
-      <!-- FEEDBACK QUESTIONS -->
+  
       <fieldset class="mb-4">
         <legend class="mb-3">Your Feedback:</legend>
         <div class="mb-3">
@@ -128,17 +124,14 @@
           <label for="contactPermission" class="form-check-label">Can we contact you for further feedback?</label>
         </div>
       </fieldset>
-
-      <!-- BUTTONS -->
+      
       <div class="d-flex justify-content-between">
         <button type="reset" class="btn btn-secondary">Reset</button>
         <button type="submit" class="btn btn-primary">Submit Feedback</button>
       </div>
-
-    </form>
+   </form>
   </main>
-
-  <!-- FOOTER -->
+  
   <footer class="bg-dark text-white text-center py-3 mt-5">
     <p>&copy; 2025 Artisan Bakery | All Rights Reserved</p>
   </footer>
