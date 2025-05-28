@@ -1,43 +1,26 @@
-/* Set the entire page background */
 body {
-  background-color: #FFE4E1; /* very light pink */
-  margin: 0;
-  font-family: Arial, sans-serif;
-}
-
-/* Navigation styling */
-nav {
-  background-color: #C71585; /* dark pink */
-  padding: 10px 0;
-  text-align: center;
-}
-
-nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-nav ul li {
-  display: inline-block;
-  margin: 0 15px;
-}
-
-nav ul li a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 16px;
-}
-
-/* Footer styling */
-footer {
-  background-color: #C71585; /* dark pink */
-  color: white;
-  text-align: center;
-  padding: 15px 0;
-  position: relative;
-  bottom: 0;
-  width: 100%;
-}
-
+      background-color: #ffe4eb; /* Light pink */
+      color: #333;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    nav.navbar-dark {
+      background-color: #C71585 !important; /* Dark pink */
+    }
+    nav.navbar-dark .navbar-nav .nav-link {
+      color: #ffffff;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+    nav.navbar-dark .navbar-nav .nav-link:hover,
+    nav.navbar-dark .navbar-nav .nav-link:focus {
+      color: #ffb6c1;
+      text-decoration: underline;
+    }
+    footer {
+background-color: #C71585;
+      color: #ffffff;
+      padding: 1rem 0;
+      text-align: center;
+      font-size: 0.9rem;
+      margin-top: 3rem;
+    }
