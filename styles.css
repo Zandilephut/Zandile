@@ -66,7 +66,97 @@ background-color: #C71585;
     h1, h2 {
       color: #bb2d55;
     }
+      h2 {
+            font-weight:700
+            margin-bottom:1rem;
+}
+            
     .table thead {
       background-color: #C71585;
       color: #fff;
     }
+        .class-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 10px rgb(255 105 180 / 0.3);
+      transition: box-shadow 0.3s ease;
+    }
+    .class-card:hover {
+      box-shadow: 0 6px 14px rgb(255 105 180 / 0.6);
+    }
+    .age-note {
+      font-size: 0.9rem;
+      color: #d6336c;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+    }
+    #quantity-section,
+    #attendee-names-section,
+    #payment-section {
+      max-width: 500px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background: #fff0f6;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgb(255 105 180 / 0.3);
+      display: none;
+    }
+    #confirmation-message {
+      max-width: 500px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background: #e9f7ef;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgb(72 180 97 / 0.3);
+      display: none;
+      text-align: center;
+    }
+    .why-come-section {
+      max-width: 720px;
+      margin: 0 auto 3rem;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #333;
+    }.contact-card {
+      background: #fff0f6;
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 4px 10px rgb(0 0 0 / 0.1);
+    }
+    .warm-message {
+      font-size: 1.2rem;
+      margin-bottom: 1.5rem;
+      color: #4a4a4a;
+    }
+    .contact-details a {
+      color: #bb2d55;
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .contact-details a:hover {
+      text-decoration: underline;
+    }
+    .funny-guide {
+      font-style: italic;
+      color: #888;
+      margin-top: 1.5rem;
+    }
+       .payment-container {
+      max-width: 600px;
+      margin: 4rem auto;
+      background: #fff;
+      padding: 2.5rem;
+      border-radius: 12px;
+      box-shadow: 0 6px 15px rgb(255 105 180 / 0.3);
+    }
+    #thank-you-message {
+      display: none;
+      text-align: center;
+      padding: 2rem;
+      background: #e9f7ef;
+      border-radius: 12px;
+      box-shadow: 0 6px 15px rgb(72 180 97 / 0.3);
+      font-size: 1.25rem;
+      color: #198754;
+      
