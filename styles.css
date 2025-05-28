@@ -1,29 +1,51 @@
 .body {
-      background-color: #ffe4eb; /* Light pink */
+      background-color: #ffe4eb;
       color: #333;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin:0;
+      padding:;
     }
     nav.navbar-dark {
-      background-color: #C71585 !important; /* Dark pink */
+      background-color: #C71585 !important; 
     }
     nav.navbar-dark .navbar-nav .nav-link {
       color: #ffffff;
       font-weight: 600;
       transition: color 0.3s ease;
     }
+nav.navbar-dark .nav-link:visited{
+      color: #ffb6c1;
     nav.navbar-dark .navbar-nav .nav-link:hover,
-    nav.navbar-dark .navbar-nav .nav-link:focus {
+    nav.navbar-dark .navbar-nav .nav-link:focus
+     nav.navbar-dark .nav-link.active  {
       color: #ffb6c1;
       text-decoration: underline;
     }
     .footer {
 background-color: #C71585;
-      color: #ffffff;
+      color: white;
       padding: 1rem 0;
       text-align: center;
       font-size: 0.9rem;
       margin-top: 3rem;
     }
+      .section-title {
+  text-align: center;
+  font-weight: 700;
+  color: #d6336c;
+  margin-bottom: 2rem;
+}
+.form-label {
+  font-weight: 600;
+  color: #d6336c;
+}
+.btn-danger {
+  background-color: #C71585;
+  border: none;
+}
+.btn-danger:hover {
+  background-color: #bb2d55;
+}
 .blog-image {
       width: 100%;
       height: auto;
