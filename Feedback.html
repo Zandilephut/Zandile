@@ -11,7 +11,6 @@
     function handleSubmit(event) {
       event.preventDefault(); // Prevent default form submission
 
-      // Collect form values
       const firstName = document.getElementById('firstname').value;
       const lastName = document.getElementById('lastname').value;
       const gender = document.querySelector('input[name="gender"]:checked').value;
@@ -20,13 +19,11 @@
       const improvement = document.getElementById('improvement').value;
       const contactPermission = document.getElementById('contactPermission').checked;
 
-      // Validate rating
       if (rating === '') {
         alert('Please select a rating.');
         return;
       }
 
-      // Display confirmation
       alert(`Thank you for your feedback, ${firstName} ${lastName}!\n\n` +
             `Your Rating: ${rating}\n` +
             `What you liked: ${liked}\n` +
@@ -34,7 +31,6 @@
             `Gender: ${gender}\n` +
             `Contact Permission: ${contactPermission ? 'Yes' : 'No'}`);
 
-      // Reset form
       document.getElementById('feedbackForm').reset();
     }
   </script>
@@ -42,36 +38,25 @@
 
 <body>
   <header>
-    <nav class="navbar navbar-expand-lg navbar-dark">
-      <div class="container">
-        <a class="navbar-brand" href="index.html"> Artisan Bakery</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="about.html">About Us</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="cakes.html">Our Cakes</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="classes.html">Bakery Classes</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact Us</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" href="Feedback.html">Feedback</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="index.html">Artisan Bakery</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav fw-semibold">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="cakes.html">Our Cakes</a></li>
+        <li class="nav-item"><a class="nav-link" href="classes.html">Baking Class</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="Feedback.html">Feedback</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
   </header>
 
   <main class="container my-5">
@@ -110,7 +95,6 @@
         </div>
       </fieldset>
 
-  
       <fieldset class="mb-4">
         <legend class="mb-3">Your Feedback:</legend>
         <div class="mb-3">
@@ -137,8 +121,9 @@
   <footer class="footer">
     <p>&copy; 2025 Artisan Bakery. All Rights Reserved</p>
   </footer>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+6q8bY81QANwvN64/yPp6vsu6i4+"
+  crossorigin="anonymous"></script>
 </body>
 
 </html>
