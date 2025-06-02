@@ -6,31 +6,30 @@
   <title>Artisan Bakery - Our Cakes</title>
   <link
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-  />
+    rel="stylesheet"/>
    <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark">
-    <div class="container">
-      <a class="navbar-brand fw-bold" href="index.html">Artisan Bakery</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-        data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
-        aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-          <li class="nav-item"><a class="nav-link active" href="cakes.html">Our Cakes</a></li>
-          <li class="nav-item"><a class="nav-link" href="classes.html">Baking Class</a></li>
-          <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
-          <li class="nav-item"><a class="nav-link" href="Feedback.html">Feedback</a></li>
-        </ul>
-      </div>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="index.html">Artisan Bakery</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav fw-semibold">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="cakes.html">Our Cakes</a></li>
+        <li class="nav-item"><a class="nav-link" href="classes.html">Baking Class</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="Feedback.html">Feedback</a></li>
+      </ul>
     </div>
-  </nav>
+  </div>
+</nav>
+
   <main class="container py-5">
     <h1 class="mb-4 fw-bold">Our Delicious Cakes</h1>
 
@@ -105,110 +104,99 @@
       </form>
     </section>
 <section class="mt-5">
-  <h2 class="fw-bold mb-4">Explore More Treats</h2>
-  <div class="row row-cols-1 row-cols-md-3 g-4">
+  <h2 class="fw-bold mb-4">Order Treats & Cakes</h2>
+  <form id="treatsForm">
+    <div class="row g-4">
+
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="images/cookies.jpg" class="card-img-top" alt="Homemade Cookies">
+          <div class="card-body">
+            <h5 class="card-title">Homemade Cookies</h5>
+            <p>P30 per pack</p>
+            <input type="number" class="form-control qty" data-price="30" min="0" placeholder="Quantity">
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 order-md-last">
+        <div class="card h-100">
+          <img src="images/cupcakes.jpg" class="card-img-top" alt="Cupcakes">
+          <div class="card-body">
+            <h5 class="card-title">Cupcakes</h5>
+            <p>P20 each</p>
+            <input type="number" class="form-control qty" data-price="20" min="0" placeholder="Quantity">
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="images/weddingcake.jpg" class="card-img-top" alt="Wedding Cake">
+          <div class="card-body">
+            <h5 class="card-title">Wedding Cake</h5>
+            <p>P500 each</p>
+            <input type="number" class="form-control qty" data-price="500" min="0" placeholder="Quantity">
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 order-md-first">
+        <div class="card h-100">
+          <img src="images/bread.jpg" class="card-img-top" alt="Bread Loaf">
+          <div class="card-body">
+            <h5 class="card-title">Bread Loaf</h5>
+            <p>P25 each</p>
+            <input type="number" class="form-control qty" data-price="25" min="0" placeholder="Quantity">
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="images/birthdaycake.jpg" class="card-img-top" alt="Birthday Cake">
+          <div class="card-body">
+            <h5 class="card-title">Birthday Cake</h5>
+            <p>P300 each</p>
+            <input type="number" class="form-control qty" data-price="300" min="0" placeholder="Quantity">
+          </div>
+        </div>
+      </div>
+    </div>
     
-    <div class="col">
-      <div class="card h-100">
-        <img src="images/Cookies.jpg" class="card-img-top" alt="Cookies">
-        <div class="card-body">
-          <h5 class="card-title">Homemade Cookies</h5>
-          <select class="form-select mb-2">
-            <option>Small Pack - P30</option>
-            <option>Medium Pack - P50</option>
-            <option>Large Pack - P70</option>
-          </select>
-          <input type="number" class="form-control mb-2" min="1" value="1" placeholder="Qty">
-          <a href="payment.html" class="btn btn-danger w-100">Buy Now</a>
-        </div>
-      </div>
+    <div class="text-center mt-4">
+      <h4>Total Price: P<span id="totalPrice">0</span></h4>
+      <button type="submit" class="btn btn-danger mt-2">Proceed to Payment</button>
     </div>
-
-    <div class="col">
-      <div class="card h-100">
-        <img src="images/Wedding-cake.jpg" class="card-img-top" alt="Wedding Cake">
-        <div class="card-body">
-          <h5 class="card-title">Wedding Cake</h5>
-          <select class="form-select mb-2">
-            <option>2 Tier - P450</option>
-            <option>3 Tier - P700</option>
-            <option>Custom - P1000+</option>
-          </select>
-          <input type="number" class="form-control mb-2" min="1" value="1" placeholder="Qty">
-          <a href="payment.html" class="btn btn-danger w-100">Buy Now</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="col">
-      <div class="card h-100">
-        <img src="images/Birthday-cake.jpg" class="card-img-top" alt="Birthday Cake">
-        <div class="card-body">
-          <h5 class="card-title">Birthday Cake</h5>
-          <select class="form-select mb-2">
-            <option>Small - P120</option>
-            <option>Medium - P180</option>
-            <option>Large - P250</option>
-          </select>
-          <input type="number" class="form-control mb-2" min="1" value="1" placeholder="Qty">
-          <a href="payment.html" class="btn btn-danger w-100">Buy Now</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="col">
-      <div class="card h-100">
-        <img src="images/Cupcakes.jpg" class="card-img-top" alt="Cupcakes">
-        <div class="card-body">
-          <h5 class="card-title">Cupcakes (6 pack)</h5>
-          <select class="form-select mb-2">
-            <option>Basic - P60</option>
-            <option>Decorated - P90</option>
-          </select>
-          <input type="number" class="form-control mb-2" min="1" value="1" placeholder="Qty">
-          <a href="payment.html" class="btn btn-danger w-100">Buy Now</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="col">
-      <div class="card h-100">
-        <img src="images/Bread-loaf.jpg" class="card-img-top" alt="Bread">
-        <div class="card-body">
-          <h5 class="card-title">Fresh Bread Loaf</h5>
-          <select class="form-select mb-2">
-            <option>Plain - P25</option>
-            <option>Seeded - P30</option>
-            <option>Garlic - P35</option>
-          </select>
-          <input type="number" class="form-control mb-2" min="1" value="1" placeholder="Qty">
-          <a href="payment.html" class="btn btn-danger w-100">Buy Now</a>
-        </div>
-      </div>
-    </div>
-  </div>
+  </form>
 </section>
-
-    <div class="row g-4 align-items-center mt-5">
-      <section class="col-lg-7">
-        <h2 class="mb-4 fw-bold">The Love for Cakes</h2>
-        <p class="blog-intro">
-          At Artisan Bakery, we believe cake is not just a dessert; it is a heartfelt creation crafted with passion, love, and artistry.
-        </p>
-        <p class="blog-intro">
-          Our bakery dedicates itself exclusively to handcrafted cakes — each baked to perfection, layered with fresh ingredients, and adorned with beautiful designs to celebrate every joyful moment.
-        </p>
-      </section>
-      <section class="col-lg-5 img-fluid-wrapper">
-        <img
-          src="https://images.unsplash.com/photo-1543779505-9b8b9b4eda51?auto=format&fit=crop&w=800&q=80"
-          alt="Delicious artisan cake"
-          class="blog-image img-fluid"
-        />
-      </section>
-    </div>
   </main>
-  
+
+  <script>
+  const qtyInputs = document.querySelectorAll('.qty');
+  const totalPriceDisplay = document.getElementById('totalPrice');
+
+  qtyInputs.forEach(input => {
+    input.addEventListener('input', () => {
+      let total = 0;
+      qtyInputs.forEach(qty => {
+        const price = parseFloat(qty.dataset.price);
+        const amount = parseInt(qty.value) || 0;
+        total += price * amount;
+      });
+      totalPriceDisplay.textContent = total.toFixed(2);
+    });
+  });
+
+  document.getElementById('treatsForm').addEventListener('submit', (e) => {
+    e.preventDefault();
+    alert('Redirecting to payment page with total: P' + totalPriceDisplay.textContent);
+  });
+</script>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+6q8bY81QANwvN64/yPp6vsu6i4+"
+  crossorigin="anonymous"></script> 
+
   <footer class="footer">
   <p> &copy; 2025 Artisan Bakery. All rights reserved.</p>
   </footer>
